@@ -8,6 +8,7 @@ const corsConfig = {
     Credential:true,
     methods:["GET","PUT","POST","DELETE"],
 };
+app.options("",cors(corsConfig));
 
 var conString = "mongodb+srv://asish:asish@asishcluster.n0oqxmr.mongodb.net/"
 
