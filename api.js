@@ -201,6 +201,10 @@ app.delete("/delete-video/:id", (req, res)=>{
     });
 });
 
+app.use("/",(req,res)=>{
+    res.json({message:"Hello"});
+});
+
 
 app.listen(3030);
 console.log('Server Started : http://127.0.0.1:3030')
