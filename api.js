@@ -201,9 +201,7 @@ app.delete("/delete-video/:id", (req, res)=>{
     });
 });
 
-app.use("/",(req,res)=>{
-    res.json({message:"Hello"});
-});
+
 
 
 app.listen(3030);
