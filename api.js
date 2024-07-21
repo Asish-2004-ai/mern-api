@@ -3,19 +3,13 @@
 var express = require("express");
 var mongoClient = require("mongodb").MongoClient;
 var cors = require("cors");
-const corsConfig = {
-    origin:"*",
-    Credential:true,
-    methods:["GET","PUT","POST","DELETE"],
-};
-app.options("",cors(corsConfig));
 
 var conString = "mongodb+srv://asish:asish@asishcluster.n0oqxmr.mongodb.net/"
 
 var app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use(cors(corsConfig));
+app.use(cors());
 
 
 app.get("/get-users", (req, res)=>{
